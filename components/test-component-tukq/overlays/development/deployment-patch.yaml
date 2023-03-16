@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-component-tukq
+  namespace: build-e2e-pcbk-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:994e1dcf32df260c25d98ead768c0afb06364d038864e56253915a54b8893dd0
+        name: my-python
+        resources: {}
+status: {}
